@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    height: 80vh;
+    background-color: lightblue;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+
+
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    padding: 3px 8px;
+
+}
+
+
+a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+.Project::after {
+    content: attr(data-project);
+    position: absolute;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 34%;
+    transform: translateX(-20%);
+    visibility: hidden;
+    
+}
+
+.Project::before{
+    content: "";
+    border-width: 6px;
+    border-style: solid;
+    border-color: black transparent transparent;
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    visibility: hidden;
+
+}
+
+
+.Project:hover:after,
+.Project:hover:before{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.blog::after {
+    content: attr(data-blog);
+    position: absolute;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    right: -54%;
+    transform: translateX(-20%);
+    visibility: hidden;
+    opacity: 0;
+
+
+}
+
+.blog::before {
+    content: "";
+    border-width: 6px;
+    border-style: solid;
+    border-color: black transparent transparent;
+    position: absolute;
+    bottom: 65%;
+    right: -50%;
+    transform: translateX(-1300%);
+    visibility: hidden;
+    opacity: 0;
+
+
+}
+
+
+.blog:hover:after,
+.blog:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
